@@ -1415,7 +1415,7 @@ start_pass_huff_decoder (j_decompress_ptr cinfo)
     if (cinfo->Ss != 0 || cinfo->Ah != 0 || cinfo->Al != 0 ||
 	((cinfo->is_baseline || cinfo->Se < DCTSIZE2) &&
 	cinfo->Se != cinfo->lim_Se))
-      WARNMS(cinfo, JWRN_NOT_SEQUENTIAL);
+      ;/*WARNMS(cinfo, JWRN_NOT_SEQUENTIAL);*/
 
     /* Select MCU decoding routine */
     /* We retain the hard-coded case for full-size blocks.

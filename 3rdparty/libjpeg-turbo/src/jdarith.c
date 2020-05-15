@@ -692,7 +692,7 @@ bad:
      */
     if (cinfo->Ss != 0 || cinfo->Ah != 0 || cinfo->Al != 0 ||
         (cinfo->Se < DCTSIZE2 && cinfo->Se != DCTSIZE2 - 1))
-      WARNMS(cinfo, JWRN_NOT_SEQUENTIAL);
+      ;/*WARNMS(cinfo, JWRN_NOT_SEQUENTIAL);*/
     /* Select MCU decoding routine */
     entropy->pub.decode_mcu = decode_mcu;
   }

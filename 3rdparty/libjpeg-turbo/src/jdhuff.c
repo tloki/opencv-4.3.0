@@ -104,7 +104,8 @@ start_pass_huff_decoder(j_decompress_ptr cinfo)
    */
   if (cinfo->Ss != 0 || cinfo->Se != DCTSIZE2 - 1 ||
       cinfo->Ah != 0 || cinfo->Al != 0)
-    WARNMS(cinfo, JWRN_NOT_SEQUENTIAL);
+    
+    ;/*WARNMS(cinfo, JWRN_NOT_SEQUENTIAL);*/
 
   for (ci = 0; ci < cinfo->comps_in_scan; ci++) {
     compptr = cinfo->cur_comp_info[ci];
